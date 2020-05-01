@@ -10,10 +10,9 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/navigateTitle"
             android:layout_width="match_parent"
             android:gravity="center"
             android:layout_height="match_parent"
-            android:text="@string/fragment_home_title"/>
+            android:text="Second Title"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

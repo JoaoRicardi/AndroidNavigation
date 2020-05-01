@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">LearnNav</string>
 
+    <string name="fragment_home_title">Home Fragment Title</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="second_fragment_title">Second title fragment</string>
+
 </resources>
