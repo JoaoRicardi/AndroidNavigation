@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import android.widget.Toast
+import androidx.core.app.ShareCompat
 import androidx.databinding.DataBindingUtil
 import com.example.learnnav.databinding.SecondFragmentBinding
 import kotlinx.android.synthetic.main.second_fragment.*
@@ -41,11 +42,9 @@ class SecondFragment : Fragment() {
 
     private fun getShareIntent(): Intent {
         val args = SecondFragmentArgs.fromBundle(arguments!!)
-        val shareIntent = Intent(Intent.ACTION_SEND)
-        shareIntent.setType("text/plain")
-            .putExtra(Intent.EXTRA_TEXT, args.userName)
-
-        return shareIntent
+        return ShareCompat.IntentBuilder.from(activity!!)
+            .setText(args.userName).setType("text/plain")
+            .intent
     }
 
     private fun shareSucess(){
