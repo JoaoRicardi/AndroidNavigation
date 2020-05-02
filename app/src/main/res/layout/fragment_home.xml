@@ -9,43 +9,29 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/editTextUserNameInputId"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="138dp"
-            android:layout_marginEnd="138dp"
-            android:hint="Digite seu nome"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <Button
             android:id="@+id/btnActionId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="111dp"
-            android:layout_marginTop="16dp"
             android:layout_marginEnd="111dp"
             android:layout_marginBottom="279dp"
-            android:text="Enviar info via action"
+            android:text="Navegar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextUserNameInputId" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/erroNavigationId"
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
-            android:visibility="gone"
             android:layout_height="wrap_content"
-            android:layout_marginStart="111dp"
-            android:layout_marginTop="21dp"
-            android:layout_marginEnd="200dp"
-            android:text="Erro ao navegar"
+            android:layout_marginStart="181dp"
+            android:layout_marginTop="344dp"
+            android:layout_marginEnd="172dp"
+            android:text="Home fragment"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnActionId" />
+            app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

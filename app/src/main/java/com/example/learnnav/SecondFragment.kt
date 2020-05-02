@@ -11,18 +11,15 @@ import kotlinx.android.synthetic.main.second_fragment.*
 
 class SecondFragment : Fragment() {
 
-    var userName: String? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        textViewName.text = userName ?: "FAILED"
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val binding: SecondFragmentBinding = DataBindingUtil.inflate(
             inflater, R.layout.second_fragment, container, false
         )
-
         setHasOptionsMenu(true)
         return binding.root
     }
@@ -41,16 +38,6 @@ class SecondFragment : Fragment() {
             menu.findItem(R.id.share).setVisible(false)
         }
     }
-
-//    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
-//        super.onCreateOptionsMenu(menu, inflater)
-//        inflater?.inflate(R.menu.winner_menu, menu)
-//        // check if the activity resolves
-//        if (null == getShareIntent().resolveActivity(activity!!.packageManager)) {
-//            // hide the menu item if it doesn't resolve
-//            menu?.findItem(R.id.share)?.setVisible(false)
-//        }
-//    }
 
     private fun getShareIntent(): Intent {
         val args = SecondFragmentArgs.fromBundle(arguments!!)

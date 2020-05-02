@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import com.example.learnnav.databinding.FragmentHomeBinding
-import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
 
@@ -18,20 +17,13 @@ class HomeFragment : Fragment() {
         )
 
         binding.btnActionId.setOnClickListener {
-            if(editTextUserNameInputId.editableText.toString().isNotEmpty()){
-                erroNavigationId.visibility = View.GONE
-                Navigation.findNavController(it).navigate(HomeFragmentDirections.actionHomeFragmentToNavigateToFragment(editTextUserNameInputId.editableText.toString()))
-            }else{
-                erroNavigationId.visibility = View.VISIBLE
-            }
+
+                Navigation.findNavController(it).navigate(HomeFragmentDirections.actionHomeFragmentToNavigateToFragment("Joao"))
+
 
         }
         setHasOptionsMenu(true)
         return binding.root
     }
 
-    companion object {
-        @JvmStatic
-        fun newInstance() = HomeFragment()
-    }
 }
