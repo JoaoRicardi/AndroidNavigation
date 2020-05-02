@@ -14,5 +14,10 @@
     <fragment
         android:id="@+id/navigateToFragment"
         android:name="com.example.learnnav.SecondFragment"
-        android:label="NavigateToFragment" />
+        android:label="NavigateToFragment" >
+        <argument
+            android:name="userName"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
 </navigation>

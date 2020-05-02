@@ -9,11 +9,43 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <EditText
+            android:id="@+id/editTextUserNameInputId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="138dp"
+            android:layout_marginEnd="138dp"
+            android:hint="Digite seu nome"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnActionId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="111dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="111dp"
+            android:layout_marginBottom="279dp"
+            android:text="Enviar info via action"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextUserNameInputId" />
+
         <TextView
-            android:id="@+id/navigateTitle"
-            android:layout_width="match_parent"
-            android:gravity="center"
-            android:layout_height="match_parent"
-            android:text="@string/fragment_home_title"/>
+            android:id="@+id/erroNavigationId"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="111dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="200dp"
+            android:text="Erro ao navegar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnActionId" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

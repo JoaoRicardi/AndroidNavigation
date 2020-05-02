@@ -1,6 +1,12 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'androidx.navigation.safeargs'
+
+
+
 
 android {
     compileSdkVersion 29
@@ -44,4 +50,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation "android.arch.navigation:navigation-fragment-ktx:2.0.0"
     implementation "android.arch.navigation:navigation-ui-ktx:2.0.0"
+
 }
