@@ -7,17 +7,23 @@
         android:id="@+id/homeFragment"
         android:name="com.example.learnnav.HomeFragment"
         android:label="HomeFragment" >
-        <action
-            android:id="@+id/action_homeFragment_to_navigateToFragment"
-            app:destination="@id/navigateToFragment" />
+
     </fragment>
-    <fragment
-        android:id="@+id/navigateToFragment"
-        android:name="com.example.learnnav.SecondFragment"
-        android:label="NavigateToFragment" >
-        <argument
-            android:name="userName"
-            app:argType="string"
-            app:nullable="true" />
-    </fragment>
+
+    <custom_dialog
+        android:id="@+id/custom_dialog" />
+
+    <action
+        android:id="@+id/actionShowDialog"
+        app:destination="@id/custom_dialog" />
+
+    <custom_bottom_sheet
+        android:id="@+id/customBottomSheet"
+        />
+
+    <action
+        android:id="@+id/actionShowBottomSheet"
+        app:destination="@+id/customBottomSheet"
+        />
+
 </navigation>
