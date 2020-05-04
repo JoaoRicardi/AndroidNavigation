@@ -12,18 +12,16 @@ import kotlinx.android.synthetic.main.second_fragment.*
 
 class SecondFragment : Fragment() {
 
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-    }
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val binding: SecondFragmentBinding = DataBindingUtil.inflate(
             inflater, R.layout.second_fragment, container, false
         )
+        val args = SecondFragmentArgs.fromBundle(arguments!!)
+        binding.textViewName.text  = args.name
         setHasOptionsMenu(true)
         return binding.root
     }
+
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
@@ -43,7 +41,7 @@ class SecondFragment : Fragment() {
     private fun getShareIntent(): Intent {
         val args = SecondFragmentArgs.fromBundle(arguments!!)
         return ShareCompat.IntentBuilder.from(activity!!)
-            .setText(args.userName).setType("text/plain")
+            .setText(args.name).setType("text/plain")
             .intent
     }
 
