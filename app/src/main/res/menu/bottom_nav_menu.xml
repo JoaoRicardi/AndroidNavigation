@@ -3,8 +3,14 @@
 
     <item
         android:title="Third Fragment"
-        android:id="@+id/thirdFragment"
+        android:id="@+id/homeFragment"
         android:icon="@drawable/ic_home"
+        />
+
+    <item
+        android:title="Third Fragment"
+        android:id="@+id/thirdFragment"
+        android:icon="@drawable/ic_pets"
         />
 
     <item
