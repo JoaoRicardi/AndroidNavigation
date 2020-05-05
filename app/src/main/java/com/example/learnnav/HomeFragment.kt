@@ -16,13 +16,6 @@ class HomeFragment : Fragment() {
             inflater, R.layout.fragment_home, container, false
         )
 
-        binding.btnActionId.setOnClickListener {
-
-                Navigation.findNavController(it).navigate(HomeFragmentDirections.actionHomeFragmentToNavigateToFragment("Joao"))
-
-
-        }
-        setHasOptionsMenu(true)
         return binding.root
     }
 

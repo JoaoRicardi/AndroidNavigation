@@ -27,7 +27,7 @@ class SecondFragment : Fragment() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
-            R.id.share -> shareSucess()
+
         }
         return super.onOptionsItemSelected(item)
     }
@@ -35,21 +35,9 @@ class SecondFragment : Fragment() {
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.second_fragment_menu,menu)
-        if(getShareIntent().resolveActivity(activity!!.packageManager) == null ){
-            menu.findItem(R.id.share).setVisible(false)
-        }
+
     }
 
-    private fun getShareIntent(): Intent {
-        val args = SecondFragmentArgs.fromBundle(arguments!!)
-        return ShareCompat.IntentBuilder.from(activity!!)
-            .setText(args.userName).setType("text/plain")
-            .intent
-    }
-
-    private fun shareSucess(){
-        startActivity(getShareIntent())
-    }
 
     companion object {
         @JvmStatic
